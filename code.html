@@ -342,14 +342,22 @@
 <div class="md:col-span-1">
 <h3 class="text-2xl font-black italic uppercase leading-tight" id="classified-heading">Seleções<br/>Classificadas</h3>
 <div class="mt-4">
-<p class="text-4xl font-black text-secondary">3/48</p>
+<p class="text-4xl font-black text-secondary">48/48</p>
 <div class="w-full bg-white/10 h-2 rounded-full mt-2 overflow-hidden">
-<div class="bg-secondary h-full w-[6%]"></div>
+<div class="bg-secondary h-full w-[Full]"></div>
 </div>
 </div>
 </div>
-<div class="md:col-span-3 grid grid-cols-3 sm:grid-cols-6 gap-4" id="classified-container">
-<!-- Rendered via JS -->
+<div id="mural-wrapper" class="md:col-span-3 overflow-hidden transition-all duration-700" style="max-height: 210px;">
+    <div id="classified-container" class="grid grid-cols-3 sm:grid-cols-6 gap-4">
+        </div>
+</div>
+
+<div class="flex justify-center mt-6 md:col-start-2 md:col-span-3">
+    <button id="toggle-classified" class="flex items-center gap-2 px-6 py-2 bg-white/5 border border-white/10 rounded-full hover:bg-secondary hover:text-primary transition-all text-xs font-bold uppercase tracking-widest group">
+        <span id="btn-text">Ver todas as seleções</span>
+        <span class="material-symbols-outlined transition-transform duration-300" id="btn-icon">expand_more</span>
+    </button>
 </div>
 </div>
 <!-- Player Showcase -->
@@ -499,9 +507,9 @@
         ];
 
         const players = [
-            { name: 'Vinícius Jr.', team: 'BRA', goals: '24', assist: '15', age: '25', img: 'images/vinijr.jpg' },
-            { name: 'Kylian Mbappé', team: 'FRA', goals: '32', assist: '08', age: '27', img: 'images/mbap.jpg' },
-            { name: 'Jude Bellingham', team: 'ENG', goals: '12', assist: '20', age: '22', img: 'images/belli.jpg' }
+            { name: 'Vinícius Jr.', team: 'BRA', goals: '1', assist: '4', age: '25',matches: '4', img: 'images/vinijr.jpg' },
+            { name: 'Kylian Mbappé', team: 'FRA', goals: '12', assist: '2', age: '27',matches: '14', img:  'images/mbap.jpg' },
+            { name: 'Jude Bellingham', team: 'ENG', goals: '1', assist: '1', age: '22', matches: '5', img: 'images/belli2.jpg' }
         ];
 
         const matches = [
@@ -510,10 +518,67 @@
         ];
 
         const classified = [
-            { name: 'CANADÁ', color: '#cc0000' },
-            { name: 'MÉXICO', color: '#006847' },
-            { name: 'USA', color: '#002868' }
-        ];
+    // Américas (Já existentes + Novas)
+    { name: 'CANADÁ', color: '#cc0000' },
+    { name: 'MÉXICO', color: '#006847' },
+    { name: 'USA', color: '#002868' },
+    { name: 'BRASIL', color: '#FFDC02' },
+    { name: 'ARGENTINA', color: '#74ACDF' },
+    { name: 'COLÔMBIA', color: '#FCD116' },
+    { name: 'EQUADOR', color: '#FFDD00' },
+    { name: 'PARAGUAI', color: '#D52B1E' },
+    { name: 'URUGUAI', color: '#0038A8' },
+    { name: 'PANAMÁ', color: '#DA121A' },
+    { name: 'CURAÇAO', color: '#002B7F' },
+    { name: 'HAITI', color: '#00209F' },
+
+    // Europa (UEFA)
+    { name: 'ALEMANHA', color: '#000000' },
+    { name: 'ÁUSTRIA', color: '#ED2939' },
+    { name: 'BÉLGICA', color: '#EF3340' },
+    { name: 'BÓSNIA', color: '#002395' },
+    { name: 'CROÁCIA', color: '#FF0000' },
+    { name: 'ESCÓCIA', color: '#005EB8' },
+    { name: 'ESPANHA', color: '#C60B1E' },
+    { name: 'FRANÇA', color: '#002395' },
+    { name: 'HOLANDA', color: '#F36C21' },
+    { name: 'INGLATERRA', color: '#CE1124' },
+    { name: 'NORUEGA', color: '#EF2B2D' },
+    { name: 'PORTUGAL', color: '#E42518' },
+    { name: 'REP. TCHECA', color: '#11457E' },
+    { name: 'SUÉCIA', color: '#006AA7' },
+    { name: 'SUÍÇA', color: '#FF0000' },
+    { name: 'TURQUIA', color: '#E30A17' },
+
+    // África (CAF)
+    { name: 'AFRICA SUL', color: '#007A4D' },
+    { name: 'ARGÉLIA', color: '#006233' },
+    { name: 'CABO VERDE', color: '#003893' },
+    { name: 'C. MARFIM', color: '#FF8200' },
+    { name: 'EGITO', color: '#C0911F' },
+    { name: 'GANA', color: '#EF3340' },
+    { name: 'MARROCOS', color: '#C1272D' },
+    { name: 'RD CONGO', color: '#007FFF' },
+    { name: 'SENEGAL', color: '#00853F' },
+    { name: 'TUNÍSIA', color: '#E70013' },
+
+    // Ásia e Oceania (AFC / OFC)
+    { name: 'A. SAUDITA', color: '#006C35' },
+    { name: 'AUSTRÁLIA', color: '#000031' },
+    { name: 'CATAR', color: '#8A1538' },
+    { name: 'COREIA SUL', color: '#CD2E3A' },
+    { name: 'IRÃ', color: '#239F40' },
+    { name: 'IRAQUE', color: '#007A33' },
+    { name: 'JAPÃO', color: '#00008B' },
+    { name: 'JORDÂNIA', color: '#CE1126' },
+    { name: 'UZBEQUISTÃO', color: '#0099B5' },
+    { name: 'N. ZELÂNDIA', color: '#000000' }
+];
+
+// Preenche automaticamente até chegar em 48, caso falte alguma
+while (classified.length < 48) {
+    classified.push({ name: 'EM BREVE', color: '#333333' });
+}
 
         // --- RENDERING LOGIC ---
         function init() {
@@ -587,11 +652,26 @@
                               <div class="absolute top-6 left-6 px-3 py-1 bg-black/40 backdrop-blur rounded text-xs font-black italic">${p.team}</div>
                           </div>
                           <div class="p-8">
-                              <h4 class="text-3xl font-black italic mb-6">${p.name}</h4>
-                              <div class="grid grid-cols-3 text-center border-t border-white/5 pt-6">
-                                  <div><p class="text-[0.6rem] opacity-40 uppercase">Gols</p><p class="text-2xl font-black text-secondary">${p.goals}</p></div>
-                                  <div><p class="text-[0.6rem] opacity-40 uppercase">Assist</p><p class="text-2xl font-black text-secondary">${p.assist}</p></div>
-                                  <div><p class="text-[0.6rem] opacity-40 uppercase">Idade</p><p class="text-2xl font-black text-secondary">${p.age}</p></div>
+    <h4 class="text-3xl font-black italic mb-6">${p.name}</h4>
+    <div class="grid grid-cols-4 text-center border-t border-white/5 pt-6 gap-2">
+        <div>
+            <p class="text-[0.55rem] opacity-40 uppercase font-bold">Partidas</p>
+            <p class="text-xl font-black text-secondary">${p.matches}</p>
+        </div>
+        <div>
+            <p class="text-[0.55rem] opacity-40 uppercase font-bold">Gols</p>
+            <p class="text-xl font-black text-secondary">${p.goals}</p>
+        </div>
+        <div>
+            <p class="text-[0.55rem] opacity-40 uppercase font-bold">Assist</p>
+            <p class="text-xl font-black text-secondary">${p.assist}</p>
+        </div>
+        <div>
+            <p class="text-[0.55rem] opacity-40 uppercase font-bold">Idade</p>
+            <p class="text-xl font-black text-secondary">${p.age}</p>
+        </div>
+    </div>
+</div>
                               </div>
                           </div>
                       </article>
@@ -610,11 +690,32 @@
                       </div>
                   `;
               });
-              for(let i=0; i<3; i++) {
-                  classCont.innerHTML += `<div class="aspect-[3/2] bg-white/5 rounded-xl flex items-center justify-center border border-dashed border-white/10 italic text-[0.6rem] opacity-20">EM BREVE</div>`;
-              }
             }
+// --- LÓGICA DO BOTÃO VER MAIS ---
+const wrapper = document.getElementById('mural-wrapper');
+const btnToggle = document.getElementById('toggle-classified');
+const btnText = document.getElementById('btn-text');
+const btnIcon = document.getElementById('btn-icon');
 
+if (btnToggle && wrapper) {
+    let aberto = false;
+
+    btnToggle.addEventListener('click', () => {
+        aberto = !aberto;
+        
+        // Se aberto, mostra tudo (2000px). Se fechado, corta (320px).
+        wrapper.style.maxHeight = aberto ? "2000px" : "210px";
+        
+        // Atualiza textos e gira a seta
+        btnText.innerText = aberto ? "Ver menos" : "Ver todas as seleções";
+        btnIcon.style.transform = aberto ? "rotate(180deg)" : "rotate(0deg)";
+        
+        // Se fechar, sobe a tela suavemente para o início
+        if (!aberto) {
+            wrapper.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+}
             // --- TIMER LOGIC ---
             const targetDate = new Date("June 11, 2026 00:00:00").getTime();
             setInterval(() => {
