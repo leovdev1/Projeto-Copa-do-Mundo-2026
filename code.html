@@ -90,6 +90,7 @@
 <div class="text-2xl font-black italic tracking-tighter text-secondary">FIFA World Cup 2026</div>
 <div class="hidden md:flex gap-8 items-center">
 <a class="font-headline font-bold italic tracking-tight text-white/70 hover:text-white transition-colors" href="#news">Notícias</a>
+<a class="font-headline font-bold italic tracking-tight text-white/70 hover:text-white transition-colors" href="#artilheiros">Maiores artilheiros</a>
 <a class="font-headline font-bold italic tracking-tight text-white/70 hover:text-white transition-colors" href="#matches">Partidas</a>
 <a class="font-headline font-bold italic tracking-tight text-white/70 hover:text-white transition-colors" href="#players">Jogadores</a>
 <a class="font-headline font-bold italic tracking-tight text-white/70 hover:text-white transition-colors" href="#stadiums">Sedes</a>
@@ -120,7 +121,7 @@
 <span class="text-[0.6rem] uppercase tracking-widest opacity-50">Horas</span>
 </div>
 <div class="bg-surface-container-high p-6 rounded-xl border-l-4 border-tertiary min-w-[100px] text-center">
-<span class="block text-4xl font-black italic" id="mins">--</span>
+<span class="block text-4xl font-black italic" id="minutes">--</span>
 <span class="text-[0.6rem] uppercase tracking-widest opacity-50">Minutos</span>
 </div>
 </div>
@@ -360,6 +361,15 @@
     </button>
 </div>
 </div>
+</div> </div> <section id="artilheiros" class="mt-32 mb-20 max-w-7xl mx-auto px-4">
+    <div class="flex justify-between items-center mb-12">
+        <h3 class="text-4xl font-black italic uppercase tracking-tighter text-white">Maiores Artilheiros</h3>
+        <div class="h-[2px] flex-grow mx-8 bg-gradient-to-r from-secondary to-transparent opacity-30"></div>
+    </div>
+    
+    <div id="artilheiros-container" class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        </div>
+</section>
 <!-- Player Showcase -->
 <div aria-labelledby="players-heading" id="players">
 <div class="flex justify-between items-center mb-8">
@@ -716,19 +726,60 @@ if (btnToggle && wrapper) {
         }
     });
 }
-            // --- TIMER LOGIC ---
-            const targetDate = new Date("June 11, 2026 00:00:00").getTime();
-            setInterval(() => {
-                const now = new Date().getTime();
-                const distance = targetDate - now;
-                const daysEl = document.getElementById("days");
-                const hoursEl = document.getElementById("hours");
-                const minsEl = document.getElementById("mins");
-                
-                if (daysEl) daysEl.innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
-                if (hoursEl) hoursEl.innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                if (minsEl) minsEl.innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            }, 1000);
+// --- LÓGICA DOS MAIORES ARTILHEIROS ---
+(function() {
+    const artilheiros = [
+        {
+            nome: "Miroslav Klose",
+            pais: "Alemanha",
+            foto: "images/klose.jpg",
+            jogos: 24,
+            gols: 16
+        },
+        {
+            nome: "Ronaldo Nazário",
+            pais: "Brasil",
+            foto: "images/fenomeno.jpg",
+            jogos: 19,
+            gols: 15
+        },
+        {
+            nome: "Gerd Müller.",
+            pais: "Alemanha Ocidental",
+            foto: "images/muller.jpg",
+            jogos: 13,
+            gols: 14
+        }
+    ];
+
+    const containerArt = document.getElementById('artilheiros-container');
+    if (containerArt) {
+        containerArt.innerHTML = ''; 
+        artilheiros.forEach(p => {
+            containerArt.innerHTML += `
+                <div class="bg-[#111] rounded-[2rem] overflow-hidden border border-white/5 group hover:border-secondary transition-all duration-500 shadow-2xl relative">
+                    <div class="relative h-96 overflow-hidden">
+                        <img src="${p.foto}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#111] via-transparent to-transparent z-10"></div>
+                        <div class="absolute bottom-6 left-6 z-20">
+                            <span class="text-[10px] font-black bg-secondary text-primary px-3 py-1 rounded-full uppercase mb-2 inline-block shadow-lg">${p.pais}</span>
+                            <h4 class="text-4xl font-black italic uppercase text-white tracking-tighter leading-none">${p.nome}</h4>
+                        </div>
+                    </div>
+                    <div class="p-8 grid grid-cols-2 gap-4 bg-white/[0.02] border-t border-white/5 text-white">
+                        <div class="text-center">
+                            <p class="text-[10px] uppercase opacity-40 font-bold tracking-widest mb-1">Partidas</p>
+                            <p class="text-4xl font-black text-secondary">${p.jogos}</p>
+                        </div>
+                        <div class="text-center border-l border-white/10">
+                            <p class="text-[10px] uppercase opacity-40 font-bold tracking-widest mb-1">Gols</p>
+                            <p class="text-4xl font-black text-secondary">${p.gols}</p>
+                        </div>
+                    </div>
+                </div>`;
+        });
+    }
+})(); // 
 
             // --- SCROLL REVEAL ---
             const revealElements = document.querySelectorAll('.reveal');
@@ -744,5 +795,28 @@ if (btnToggle && wrapper) {
         }
 
         window.onload = init;
+        // ... todo o seu código que já existe ...
+
+    // COLE O CÓDIGO DO MOTOR DO TIMER AQUI EMBAIXO:
+    const tempoCopa = () => {
+        const dataAlvo = new Date("June 11, 2026 00:00:00").getTime();
+        const agora = new Date().getTime();
+        const diferenca = dataAlvo - agora;
+
+        if (diferenca > 0) {
+            const d = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+            const h = Math.floor((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const m = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
+            const s = Math.floor((diferenca % (1000 * 60)) / 1000);
+
+            if(document.getElementById('days')) document.getElementById('days').innerText = d.toString().padStart(2, '0');
+            if(document.getElementById('hours')) document.getElementById('hours').innerText = h.toString().padStart(2, '0');
+            if(document.getElementById('minutes')) document.getElementById('minutes').innerText = m.toString().padStart(2, '0');
+            if(document.getElementById('seconds')) document.getElementById('seconds').innerText = s.toString().padStart(2, '0');
+        }
+    };
+    setInterval(tempoCopa, 1000);
+    tempoCopa();
+
     </script>
 </body></html>
