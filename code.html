@@ -89,12 +89,12 @@
 <div class="flex justify-between items-center px-6 py-4 max-w-[1920px] mx-auto">
 <div class="text-2xl font-black italic tracking-tighter text-secondary">FIFA World Cup 2026</div>
 <div class="hidden md:flex gap-8 items-center">
-<a class="font-headline font-bold italic tracking-tight text-white/70 hover:text-white transition-colors" href="#news">Notícias</a>
+<a class="font-headline font-bold italic tracking-tight text-white/70 hover:text-white transition-colors" href="#formato">Informações</a>
 <a class="font-headline font-bold italic tracking-tight text-white/70 hover:text-white transition-colors" href="#artilheiros">Maiores artilheiros</a>
 <a class="font-headline font-bold italic tracking-tight text-white/70 hover:text-white transition-colors" href="#matches">Partidas</a>
-<a class="font-headline font-bold italic tracking-tight text-white/70 hover:text-white transition-colors" href="#players">Jogadores</a>
+<a class="font-headline font-bold italic tracking-tight text-white/70 hover:text-white transition-colors" href="#players">Jogadores em destaque</a>
 <a class="font-headline font-bold italic tracking-tight text-white/70 hover:text-white transition-colors" href="#stadiums">Sedes</a>
-<button class="bg-secondary text-on-secondary font-bold italic px-6 py-2 rounded-lg active:scale-95 transition-transform">Ingressos</button>
+<a class="font-headline font-bold italic tracking-tight text-white/70 hover:text-white transition-colors" href="#Mascotes">Mascotes</a>
 </div>
 </div>
 </nav>
@@ -157,7 +157,7 @@
 </article>
 </section>
 <!-- Section 3: The New Format -->
-<section aria-labelledby="format-heading" class="py-24 px-8 bg-surface-container reveal">
+<section aria-labelledby="format-heading" id="formato" class="py-24 px-8 bg-surface-container reveal">
 <div class="max-w-7xl mx-auto text-center">
 <h2 class="text-5xl font-black italic mb-12 uppercase" id="format-heading">O Novo Formato</h2>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -180,7 +180,7 @@
 </div>
 </section>
 <!-- Section 4: Mascots -->
-<section aria-labelledby="mascots-heading" class="py-24 px-8 bg-surface reveal">
+<section aria-labelledby="mascots-heading" id="Mascotes" class="py-24 px-8 bg-surface reveal">
 <div class="max-w-7xl mx-auto">
 <div class="text-center mb-16">
 <h2 class="text-5xl font-black italic uppercase" id="mascots-heading">Mascotes Oficiais</h2>
@@ -203,7 +203,15 @@
 <div class="absolute bottom-12 left-12 max-w-md">
 <h3 class="text-3xl font-black italic text-secondary uppercase">16 Cidades Sedes</h3>
 <p class="text-white/60 mt-2">Explore os palcos onde a história será escrita.</p>
-<button class="mt-6 px-6 py-2 border border-secondary text-secondary font-bold rounded-lg hover:bg-secondary hover:text-on-secondary transition-colors">Abrir Mapa Interativo</button>
+<a href="https://ge.globo.com/futebol/futebol-internacional/noticia/2024/02/05/copa-do-mundo-2026-conheca-os-16-estadios-que-vao-receber-o-torneio.ghtml" 
+   target="_blank" 
+   style="text-decoration: none !important;"
+   class=" mt-8 inline-flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full text-white transition-all group w-fit">
+    <span class="text-white">Abrir mapa interativo</span>
+    <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+    </svg>
+</a>
 </div>
 </div>
 <div>
