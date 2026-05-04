@@ -425,51 +425,48 @@
 </article>
 <!-- Playlist -->
 <article class="lg:col-span-4 bg-surface-container p-8 rounded-3xl rgb-animated-border">
-<h3 class="text-xl font-black italic uppercase mb-6">Playlist Oficial</h3>
-<div class="space-y-4">
-<div class="flex items-center gap-4 p-3 bg-white/5 rounded-xl group cursor-pointer hover:bg-white/10 transition-all">
-<div class="w-12 h-12 bg-secondary/20 flex items-center justify-center rounded-lg">
-<span aria-hidden="true" class="material-symbols-outlined text-secondary">play_arrow</span>
-</div>
-<div>
-<p class="font-bold text-sm">United as One</p>
-<p class="text-[0.65rem] opacity-40 uppercase">FIFA Official Artist</p>
-</div>
-</div>
-<div class="flex items-center gap-4 p-3 bg-white/5 rounded-xl group cursor-pointer hover:bg-white/10 transition-all">
-<div class="w-12 h-12 bg-primary/20 flex items-center justify-center rounded-lg">
-<span aria-hidden="true" class="material-symbols-outlined text-primary">play_arrow</span>
-</div>
-<div>
-<p class="font-bold text-sm">Rhythm of the Sun</p>
-<p class="text-[0.65rem] opacity-40 uppercase">Mexico Mix 2026</p>
-</div>
-</div>
-</div>
-<button class="w-full mt-6 py-3 border border-white/10 text-xs font-bold uppercase rounded-xl hover:bg-white/5">Ouvir no Spotify</button>
+    <h3 class="text-xl font-black italic uppercase mb-6">Música Oficial</h3>
+    <div class="w-full">
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/3i5yV30C8kFn84q5qIh2sY?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+</article>
 </article>
 <!-- Social Feed -->
 <article class="lg:col-span-8 bg-surface-container p-8 rounded-3xl">
-<div class="flex justify-between items-center mb-6">
-<h3 class="text-xl font-black italic uppercase">#FIFAWorldCup2026</h3>
-<span class="text-xs opacity-40">Feed do Instagram</span>
-</div>
-<div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-<div class="aspect-square bg-surface-container-high rounded-xl overflow-hidden hover:opacity-80 transition-all cursor-pointer">
-<img alt="Postagem no Instagram 1" class="news-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcvJYrifC_P7r3_b1XDc811ufsQyHP55-zWPv_YwEJC5tB4vDaHNk8souKz5o5DmPKrp8CvM1TD1Gner_kpXlmmGTbqp_89_F5qW1u1paUm7qIRh8nUY7Ekms-1Yk5KFx1BktsYlkbjdP7ZCuBYPzlUeevNcnDHBGh8lwICPb-coUPFsUsZyCEcpnsZWnv08T1d6cWGY1PnHfJ3yKzc3LEJEzBomkn51iQ-3EmWr6KIw8uu6DCmMpfBFdL9KTYa79fXeV8pQbaF8E5"/>
-</div>
-<div class="aspect-square bg-surface-container-high rounded-xl overflow-hidden hover:opacity-80 transition-all cursor-pointer">
-<img alt="Postagem no Instagram 2" class="news-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBg_nbi1k36jkyOL1P9sUC_MqVrXX6qVe7FYgZz-dxTdwcEWsZbvXJxsl4X2eVujBoxPaPSOfq-FYKhYyeYyA1naNm6KlHFfCZNZ4tdqgsWgInB6IosuQrbJJaZUUsIWK5lsqxVvUkfk4ZqNY-v4rhAyPFf0ROshG0VjrZeTqFt3rL4ymPl6vggq_gcrAzEtb-HCMhkZkp5DGfERjd2oQ9hPoAMtmgDCP9lmvPh2QvFxdx82H-SI_U_jYAzu7RQvRQeOLgOo14xbEDW"/>
-</div>
-<div class="aspect-square bg-surface-container-high rounded-xl overflow-hidden hover:opacity-80 transition-all cursor-pointer">
-<img alt="Postagem no Instagram 3" class="news-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWOqZ2CCl4SDy9HTiJJhCWLZQqHYBG6-OyKhh00lbIXVfAUHYgi5Z4uAnrux48_cgcrPcPPaQKa-oBhEnZiVmzQRhnAmR9N6tZgFYsh8ulv4wan4FS6lYdlRUH1LO4FhylcDm1LLbchWrgEab59w__mnePG1vpqmb1OlwLv9IyYdvJ3q8PVo9V_fgzU56xBGUgIp3ZbKirdEUcdBqvriUIroiwjd-CV6QluxLVVEZIxfNkxrNLaQAWjcORVMA1ZHrIXkf1-CfL8sYJ"/>
-</div>
-<div class="aspect-square bg-surface-container-high rounded-xl flex items-center justify-center italic text-[0.6rem] text-white/20 border border-dashed border-white/10">VER MAIS</div>
-</div>
+    <div class="flex justify-between items-center mb-6">
+        <h3 class="text-xl font-black italic uppercase">#FIFAWorldCup2026</h3>
+        <span class="text-xs opacity-40">Feed do Instagram</span>
+    </div>
+    
+    <!-- Ajustado para 3 colunas para preencher melhor o espaço -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        
+        <!-- Post 1 -->
+        <a href="https://www.instagram.com/fifaworldcup/" target="_blank" class="aspect-square bg-surface-container-high rounded-xl overflow-hidden hover:scale-105 transition-all cursor-pointer relative group">
+            <img alt="Post oficial FIFA 1" class="w-full h-full object-cover" src="images/insta1.jpg"/>
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                <span class="material-symbols-outlined text-white">open_in_new</span>
+            </div>
+        </a>
+        
+        <!-- Post 2 -->
+        <a href="https://www.instagram.com/fifaworldcup/" target="_blank" class="aspect-square bg-surface-container-high rounded-xl overflow-hidden hover:scale-105 transition-all cursor-pointer relative group">
+            <img alt="Post oficial FIFA 2" class="w-full h-full object-cover" src="images/insta2.jpg"/>
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                <span class="material-symbols-outlined text-white">open_in_new</span>
+            </div>
+        </a>
+
+        <!-- Post 3 -->
+        <a href="https://www.instagram.com/fifaworldcup/" target="_blank" class="aspect-square bg-surface-container-high rounded-xl overflow-hidden hover:scale-105 transition-all cursor-pointer relative group">
+            <img alt="Post oficial FIFA 3" class="w-full h-full object-cover" src="images/insta3.jpg"/>
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                <span class="material-symbols-outlined text-white">open_in_new</span>
+            </div>
+        </a>
+
+    </div>
 </article>
-</div>
-</section>
-</main>
 <!-- Footer & Newsletter -->
 <footer class="bg-surface py-24 border-t border-white/5 reveal">
 <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-12 gap-12">
@@ -523,8 +520,8 @@
         ];
 
         const matches = [
-            { date: '11 JUN • 20:00', t1: 'MEX', t2: 'TBD', venue: 'Estádio Azteca, MEX', status: 'ABERTURA', color: 'bg-secondary/20 text-secondary' },
-            { date: '12 JUN • 18:00', t1: 'CAN', t2: 'TBD', venue: 'BC Place, VAN', status: 'GRUPO A', color: 'bg-white/10 text-white/50' }
+            { date: '11 JUN • 20:00', t1: 'MEXICO', t2: 'ÁFRICA DO SUL', venue: 'Estádio Azteca, MEX', status: 'ABERTURA', color: 'bg-secondary/20 text-secondary' },
+            { date: '12 JUN • 18:00', t1: 'CANADÁ', t2: 'BÓSNIA E HERZEGOVINA', venue: 'BC Place, VAN', status: 'GRUPO A', color: 'bg-white/10 text-white/50' }
         ];
 
         const classified = [
