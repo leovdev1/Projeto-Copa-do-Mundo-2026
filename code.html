@@ -127,7 +127,9 @@
 </div>
 </div>
 <div class="hidden lg:flex justify-center reveal">
-<img alt="Logotipo oficial da FIFA World Cup 2026 destacando o troféu" class="w-3/4 drop-shadow-[0_0_50px_rgba(153,184,254,0.3)] animate-pulse" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5Z_R_q6O1n-tqPpBPzXr2Htc-1m2Lin6N6wy4InhlBBaTOAnIfYMIh6hKJ6i6NYTSBliZiLD0hNWvBkJHhQ3_jSttEfKjYzEnInqKcxIGnrwH2uANoaPhhXeiFfCx0zK74mjjQ86BoOia3ENaJ24SxwqyzTyp-qCiyFW8XX-mOBOb0qTWmcjfZ5hkCl6BH5UQkaxHoeAsE2aL3OPTn_V6Xwgt4TCPeq7gMqaa4k4Z-wE17dzdagsC1zVq6CzK0DrkdX86qQVqx0YJ"/>
+    <img alt="Taça da Final - Copa 2026" 
+         class="w-3/4 rounded-full aspect-square object-cover drop-shadow-[0_0_50px_rgba(255,215,0,0.3)] animate-pulse border-4 border-primary/20" 
+         src="images/taca.jpg">
 </div>
 </div>
 </section>
@@ -258,11 +260,16 @@
 </div>
 </div>
 </div>
-<button class="px-8 py-3 bg-on-primary text-primary font-black italic rounded-xl hover:scale-105 transition-transform">BAIXAR GUIA COMPLETO</button>
+<a href="https://www.fifa.com/en/about-fifa/organisation/contact-fifa" 
+   target="_blank" 
+   class="inline-block px-8 py-3 bg-on-primary text-primary font-black italic rounded-xl hover:scale-105 transition-transform text-center">
+   ACESSAR GUIA OFICIAL
+</a>
 </div>
-<div class="w-full md:w-80 h-64 bg-black/10 rounded-2xl flex items-center justify-center italic font-bold">
-                    [Infográfico de Distâncias]
-                </div>
+<div class="w-full md:w-80 h-64 rounded-2xl overflow-hidden border border-white/10">
+    <img src="images/estametlife.jpg" 
+         alt="Estádio MetLife" 
+         class="w-full h-full object-cover">
 </div>
 </section>
 <!-- Section 7: Fan Festivals -->
@@ -278,7 +285,7 @@
 <p class="text-xs opacity-50 uppercase">Locais</p>
 </div>
 <div>
-<p class="text-3xl font-black text-tertiary">24/7</p>
+<p class="text-3xl font-black text-tertiary">247</p>
 <p class="text-xs opacity-50 uppercase">Atividades</p>
 </div>
 </div>
@@ -298,9 +305,11 @@
 </div>
 <div class="flex gap-4">
 <label class="sr-only" for="city-filter">Filtrar por Cidade</label>
-<select class="bg-surface-container-high border-white/10 rounded-lg text-sm px-4 py-2 focus:ring-secondary" id="city-filter">
-<option>Todas as Cidades</option>
-</select>
+<a href="https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/host-cities" 
+   target="_blank" 
+   class="bg-surface-container-high border border-white/10 rounded-lg text-sm px-4 py-2 hover:bg-white/10 transition-all">
+   Todas as Cidades
+</a>
 </div>
 </div>
 <!-- Matches Table -->
@@ -382,7 +391,12 @@
 <div aria-labelledby="players-heading" id="players">
 <div class="flex justify-between items-center mb-8">
 <h3 class="text-3xl font-black italic uppercase" id="players-heading">Olho no Craque</h3>
-<a class="text-primary text-xs font-bold uppercase flex items-center gap-2" href="#">Ver Todos <span aria-hidden="true" class="material-symbols-outlined text-sm">trending_flat</span></a>
+<a class="text-primary text-xs font-bold uppercase flex items-center gap-2 hover:underline" 
+   href="https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026"" 
+   target="_blank">
+   Ver Todos 
+   <span aria-hidden="true" class="material-symbols-outlined text-sm">trending_flat</span>
+</a>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="players-container">
 <!-- Rendered via JS -->
@@ -699,27 +713,47 @@ function checkAnswer(button, isCorrect) {
                     </div>
                 </div>
 
-                <!-- Coluna 2: Minuto da Copa -->
-                <div class="md:col-span-4">
-                    <h3 class="font-black italic uppercase mb-8 text-lg text-white">Minuto da Copa</h3>
-                    <p class="text-sm text-white/60 mb-6">Receba as últimas notícias, ofertas de ingressos e novidades no seu e-mail.</p>
-                    <div class="space-y-4">
-                        <input class="w-full bg-surface border border-white/10 rounded-xl px-4 py-3 text-white outline-none focus:border-secondary transition-all" placeholder="Seu e-mail" type="email">
-                        <button class="w-full bg-secondary text-on-secondary font-black italic py-3 rounded-xl uppercase hover:brightness-110 transition-all">
-                            Inscrever-se
-                        </button>
-                    </div>
-                </div>
+               <!-- Coluna 2: Brasil na Copa -->
+<div class="md:col-span-4">
+    <h3 class="font-black italic uppercase mb-8 text-lg text-white">Rumo ao Hexa</h3>
+    <p class="text-sm text-white/60 mb-6">O Brasil continua sendo a única seleção a participar de todas as edições do torneio e busca manter sua hegemonia mundial.</p>
+    <div class="space-y-3">
+        <div class="flex items-center gap-3">
+            <span class="text-secondary font-black">1958, 1962, 1970, 1994, 2002</span>
+            <span class="text-[10px] text-white/30 uppercase italic">Anos dos Títulos</span>
+        </div>
+        <div class="h-1 w-full bg-white/5 rounded-full overflow-hidden">
+            <div class="h-full bg-secondary w-5/6"></div>
+        </div>
+        <p class="text-[11px] text-white/40 italic">O maior vencedor da história da FIFA World Cup™</p>
+    </div>
+</div>
 
-                <!-- Coluna 3: Links (Alinhamento corrigido) -->
-                <div class="md:col-span-4 flex flex-col items-start md:items-end justify-start">
-                    <nav class="flex flex-col gap-4 text-left md:text-right font-bold">
-                        <a class="text-white/40 hover:text-secondary transition-all" href="#">Privacidade</a>
-                        <a class="text-white/40 hover:text-secondary transition-all" href="#">Termos de Uso</a>
-                        <a class="text-white/40 hover:text-secondary transition-all" href="#">FAQ Ingressos</a>
-                        <a class="text-white/40 hover:text-secondary transition-all" href="#">Imprensa</a>
-                    </nav>
-                </div>
+                <!-- Coluna 3: Links Legais -->
+<div class="md:col-span-4 flex flex-col items-start md:items-end justify-start">
+    <nav class="flex flex-col gap-4 text-left md:text-right font-bold">
+        <a href="https://www.fifa.com/en/legal/privacy-policy" 
+           target="_blank" 
+           class="text-white/40 hover:text-secondary transition-all">
+           Privacidade
+        </a>
+        <a href="https://www.fifa.com/en/legal/terms-of-service" 
+           target="_blank" 
+           class="text-white/40 hover:text-secondary transition-all">
+           Termos de Uso
+        </a>
+        <a href="https://www.fifa.com/en/tickets" 
+           target="_blank" 
+           class="text-white/40 hover:text-secondary transition-all">
+           FAQ Ingressos
+        </a>
+        <a href="https://www.fifa.com/en/about-fifa/organisation/media-releases" 
+           target="_blank" 
+           class="text-white/40 hover:text-secondary transition-all">
+           Imprensa
+        </a>
+    </nav>
+</div>
 
                 <!-- Direitos Autorais -->
                 <div class="col-span-full mt-12 pt-8 border-t border-white/5 text-center">
@@ -1027,9 +1061,7 @@ if (btnToggle && wrapper) {
         }
 
         window.onload = init;
-        // ... todo o seu código que já existe ...
-
-    // COLE O CÓDIGO DO MOTOR DO TIMER AQUI EMBAIXO:
+       
     const tempoCopa = () => {
         const dataAlvo = new Date("June 11, 2026 00:00:00").getTime();
         const agora = new Date().getTime();
