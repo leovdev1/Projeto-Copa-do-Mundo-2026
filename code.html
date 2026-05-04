@@ -394,43 +394,240 @@
 <section aria-labelledby="engagement-heading" class="py-24 px-8 bg-surface-container-high reveal">
 <h2 class="sr-only" id="engagement-heading">Engajamento dos Torcedores</h2>
 <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8">
-<!-- Bolão -->
-<article class="lg:col-span-8 bg-surface-container p-12 rounded-3xl border border-secondary/20 relative overflow-hidden group">
-<span aria-hidden="true" class="material-symbols-outlined absolute -right-16 -bottom-16 text-[15rem] text-secondary/5 group-hover:scale-110 transition-transform duration-700">sports_soccer</span>
-<div class="relative z-10 flex flex-col md:flex-row gap-8">
-<div class="flex-1 space-y-6">
-<h3 class="text-4xl font-black italic uppercase">Bolão dos Amigos</h3>
-<p class="text-white/60">Crie sua liga, convide amigos e ganhe prêmios exclusivos. Mostre que você é o mestre dos palpites!</p>
-<form class="flex gap-2">
-<label class="sr-only" for="league-name">Nome da sua liga</label>
-<input class="flex-1 bg-surface-container-high border-white/10 rounded-xl px-6 py-4 focus:ring-secondary" id="league-name" placeholder="Nome da sua liga" type="text"/>
-<button class="bg-secondary text-on-secondary font-black italic uppercase px-8 rounded-xl" type="submit">Criar</button>
-</form>
-</div>
-<div class="w-full md:w-64 space-y-4">
-<div class="p-4 bg-white/5 rounded-xl">
-<p class="text-[0.6rem] uppercase opacity-40 font-bold mb-1">Líder Global</p>
-<p class="font-bold flex justify-between">@FifaFan99 <span class="text-secondary">1.450 pts</span></p>
-</div>
-<div class="p-4 bg-white/5 rounded-xl">
-<p class="text-[0.6rem] uppercase opacity-40 font-bold mb-1">Seu Rank</p>
-<p class="font-bold flex justify-between">#14.201 <span class="opacity-40 text-sm">280 pts</span></p>
-</div>
-</div>
-</div>
+<!-- Seção de Grupos - 48 Seleções -->
+<article class="lg:col-span-8 bg-surface-container p-10 rounded-3xl border border-secondary/20 relative overflow-hidden group">
+    <span aria-hidden="true" class="material-symbols-outlined absolute -right-16 -bottom-16 text-[15rem] text-secondary/5 group-hover:scale-110 transition-transform duration-700">sports_soccer</span>
+    
+    <div class="relative z-10 space-y-8">
+        <div class="flex justify-between items-end">
+            <div>
+                <h3 class="text-4xl font-black italic uppercase">Fase de Grupos</h3>
+                <p class="text-white/60 text-sm">As 48 seleções divididas em 12 grupos rumo ao título de 2026.</p>
+            </div>
+            <span class="text-[0.6rem] bg-white/5 px-3 py-1 rounded-full opacity-40 uppercase tracking-widest mb-1">Copa 2026</span>
+        </div>
+
+        <!-- Container dos Grupos -->
+        <div id="groups-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 overflow-hidden transition-all duration-700 ease-in-out" style="max-height: 290px;">
+            
+            <!-- GRUPO A -->
+            <div class="p-4 bg-white/5 rounded-2xl border border-white/5">
+                <p class="text-[0.6rem] uppercase opacity-40 font-bold mb-3 border-b border-white/10 pb-1">Grupo A</p>
+                <ul class="space-y-2 text-sm font-bold">
+                    <li class="flex justify-between"><span>México</span> <span class="text-secondary">0</span></li>
+                    <li class="flex justify-between opacity-60"><span>África do Sul</span> <span>0</span></li>
+                    <li class="flex justify-between opacity-60"><span>Rep. Coreia</span> <span>0</span></li>
+                    <li class="flex justify-between opacity-60"><span>Tchéquia</span> <span>0</span></li>
+                </ul>
+            </div>
+
+            <!-- GRUPO B -->
+            <div class="p-4 bg-white/5 rounded-2xl border border-white/5">
+                <p class="text-[0.6rem] uppercase opacity-40 font-bold mb-3 border-b border-white/10 pb-1">Grupo B</p>
+                <ul class="space-y-2 text-sm font-bold">
+                    <li class="flex justify-between"><span>Canadá</span> <span class="text-secondary">0</span></li>
+                    <li class="flex justify-between opacity-60"><span>Bósnia e Herz.</span> <span>0</span></li>
+                    <li class="flex justify-between opacity-60"><span>Catar</span> <span>0</span></li>
+                    <li class="flex justify-between opacity-60"><span>Suíça</span> <span>0</span></li>
+                </ul>
+            </div>
+
+            <!-- GRUPO C (DESTAQUE BRASIL) -->
+            <div class="p-4 bg-white/10 rounded-2xl border border-secondary/30 ring-1 ring-secondary/20">
+                <p class="text-[0.6rem] uppercase text-secondary font-bold mb-3 border-b border-secondary/20 pb-1">Grupo C</p>
+                <ul class="space-y-2 text-sm font-bold text-white">
+                    <li class="flex justify-between"><span>Brasil</span> <span class="text-secondary">0</span></li>
+                    <li class="flex justify-between opacity-60"><span>Marrocos</span> <span>0</span></li>
+                    <li class="flex justify-between opacity-60"><span>Haiti</span> <span>0</span></li>
+                    <li class="flex justify-between opacity-60"><span>Escócia</span> <span>0</span></li>
+                </ul>
+            </div>
+
+            <!-- GRUPO D -->
+            <div class="p-4 bg-white/5 rounded-2xl border border-white/5">
+                <p class="text-[0.6rem] uppercase opacity-40 font-bold mb-3 border-b border-white/10 pb-1">Grupo D</p>
+                <ul class="space-y-2 text-sm font-bold">
+                    <li class="flex justify-between"><span>EUA</span> <span class="text-secondary">0</span></li>
+                    <li class="flex justify-between opacity-60"><span>Paraguai</span> <span>0</span></li>
+                    <li class="flex justify-between opacity-60"><span>Austrália</span> <span>0</span></li>
+                    <li class="flex justify-between opacity-60"><span>Turquia</span> <span>0</span></li>
+                </ul>
+            </div>
+
+            <!-- GRUPO E -->
+            <div class="p-4 bg-white/5 rounded-2xl border border-white/5">
+                <p class="text-[0.6rem] uppercase opacity-40 font-bold mb-3 border-b border-white/10 pb-1">Grupo E</p>
+                <ul class="space-y-2 text-sm font-bold">
+                    <li class="flex justify-between"><span>Alemanha</span> <span class="text-secondary">0</span></li>
+                    <li class="flex justify-between opacity-60"><span>Curaçau</span> <span>0</span></li>
+                    <li class="flex justify-between opacity-60"><span>Costa do Marfim</span> <span>0</span></li>
+                    <li class="flex justify-between opacity-60"><span>Equador</span> <span>0</span></li>
+                </ul>
+            </div>
+
+            <!-- GRUPO F -->
+            <div class="p-4 bg-white/5 rounded-2xl border border-white/5">
+                <p class="text-[0.6rem] uppercase opacity-40 font-bold mb-3 border-b border-white/10 pb-1">Grupo F</p>
+                <ul class="space-y-2 text-sm font-bold">
+                    <li class="flex justify-between"><span>Holanda</span> <span class="text-secondary">0</span></li>
+                    <li class="flex justify-between opacity-60"><span>Japão</span> <span>0</span></li>
+                    <li class="flex justify-between opacity-60"><span>Suécia</span> <span>0</span></li>
+                    <li class="flex justify-between opacity-60"><span>Tunísia</span> <span>0</span></li>
+                </ul>
+            </div>
+
+            <!-- GRUPO G -->
+            <div class="p-4 bg-white/5 rounded-2xl border border-white/5">
+                <p class="text-[0.6rem] uppercase opacity-40 font-bold mb-3 border-b border-white/10 pb-1">Grupo G</p>
+                <ul class="space-y-2 text-sm font-bold">
+                    <li class="flex justify-between"><span>Bélgica</span> <span class="text-secondary">0</span></li>
+                    <li class="flex justify-between opacity-60"><span>Egito</span> <span>0</span></li>
+                    <li class="flex justify-between opacity-60"><span>Irã</span> <span>0</span></li>
+                    <li class="flex justify-between opacity-60"><span>N. Zelândia</span> <span>0</span></li>
+                </ul>
+            </div>
+
+            <!-- GRUPO H -->
+            <div class="p-4 bg-white/5 rounded-2xl border border-white/5">
+                <p class="text-[0.6rem] uppercase opacity-40 font-bold mb-3 border-b border-white/10 pb-1">Grupo H</p>
+                <ul class="space-y-2 text-sm font-bold">
+                    <li class="flex justify-between"><span>Espanha</span> <span class="text-secondary">0</span></li>
+                    <li class="flex justify-between opacity-60"><span>Cabo Verde</span> <span>0</span></li>
+                    <li class="flex justify-between opacity-60"><span>Arábia Saudita</span> <span>0</span></li>
+                    <li class="flex justify-between opacity-60"><span>Uruguai</span> <span>0</span></li>
+                </ul>
+            </div>
+
+            <!-- GRUPO I -->
+            <div class="p-4 bg-white/5 rounded-2xl border border-white/5">
+                <p class="text-[0.6rem] uppercase opacity-40 font-bold mb-3 border-b border-white/10 pb-1">Grupo I</p>
+                <ul class="space-y-2 text-sm font-bold">
+                    <li class="flex justify-between"><span>França</span> <span class="text-secondary">0</span></li>
+                    <li class="flex justify-between opacity-60"><span>Senegal</span> <span>0</span></li>
+                    <li class="flex justify-between opacity-60"><span>Iraque</span> <span>0</span></li>
+                    <li class="flex justify-between opacity-60"><span>Noruega</span> <span>0</span></li>
+                </ul>
+            </div>
+
+            <!-- GRUPO J -->
+            <div class="p-4 bg-white/5 rounded-2xl border border-white/5">
+                <p class="text-[0.6rem] uppercase opacity-40 font-bold mb-3 border-b border-white/10 pb-1">Grupo J</p>
+                <ul class="space-y-2 text-sm font-bold">
+                    <li class="flex justify-between"><span>Argentina</span> <span class="text-secondary">0</span></li>
+                    <li class="flex justify-between opacity-60"><span>Argélia</span> <span>0</span></li>
+                    <li class="flex justify-between opacity-60"><span>Áustria</span> <span>0</span></li>
+                    <li class="flex justify-between opacity-60"><span>Jordânia</span> <span>0</span></li>
+                </ul>
+            </div>
+
+            <!-- GRUPO K -->
+            <div class="p-4 bg-white/5 rounded-2xl border border-white/5">
+                <p class="text-[0.6rem] uppercase opacity-40 font-bold mb-3 border-b border-white/10 pb-1">Grupo K</p>
+                <ul class="space-y-2 text-sm font-bold">
+                    <li class="flex justify-between"><span>Portugal</span> <span class="text-secondary">0</span></li>
+                    <li class="flex justify-between opacity-60"><span>RD Congo</span> <span>0</span></li>
+                    <li class="flex justify-between opacity-60"><span>Uzbequistão</span> <span>0</span></li>
+                    <li class="flex justify-between opacity-60"><span>Colômbia</span> <span>0</span></li>
+                </ul>
+            </div>
+
+            <!-- GRUPO L -->
+            <div class="p-4 bg-white/5 rounded-2xl border border-white/5">
+                <p class="text-[0.6rem] uppercase opacity-40 font-bold mb-3 border-b border-white/10 pb-1">Grupo L</p>
+                <ul class="space-y-2 text-sm font-bold">
+                    <li class="flex justify-between"><span>Inglaterra</span> <span class="text-secondary">0</span></li>
+                    <li class="flex justify-between opacity-60"><span>Croácia</span> <span>0</span></li>
+                    <li class="flex justify-between opacity-60"><span>Gana</span> <span>0</span></li>
+                    <li class="flex justify-between opacity-60"><span>Panamá</span> <span>0</span></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Botão Ver Mais -->
+        <div class="flex justify-center mt-6">
+            <button onclick="toggleGroups()" id="btn-show-groups" class="flex items-center gap-2 bg-white/5 hover:bg-white/10 text-white text-[0.65rem] font-bold uppercase tracking-widest px-8 py-3 rounded-xl border border-white/10 transition-all">
+                Ver todos os grupos <span class="material-symbols-outlined text-sm transition-transform duration-300" id="arrow-icon">expand_more</span>
+            </button>
+        </div>
+    </div>
 </article>
-<!-- Quiz -->
+
+<script>
+function toggleGroups() {
+    const container = document.getElementById('groups-container');
+    const btn = document.getElementById('btn-show-groups');
+    const icon = document.getElementById('arrow-icon');
+
+    // Verifica se está fechado (altura de uma linha de cards aprox 290px)
+    if (container.style.maxHeight === '290px' || container.style.maxHeight === '') {
+        container.style.maxHeight = '2500px'; // Abre o suficiente para os 12 grupos
+        btn.innerHTML = 'Recolher grupos <span class="material-symbols-outlined text-sm rotate-180" id="arrow-icon">expand_more</span>';
+    } else {
+        container.style.maxHeight = '290px'; // Fecha
+        btn.innerHTML = 'Ver todos os grupos <span class="material-symbols-outlined text-sm" id="arrow-icon">expand_more</span>';
+    }
+}
+</script>
+<!-- Quiz da Copa -->
 <article class="lg:col-span-4 bg-primary p-10 rounded-3xl text-on-primary">
-<h3 class="text-2xl font-black italic uppercase mb-8">Quiz da Copa</h3>
-<div class="space-y-6">
-<p class="font-bold text-lg leading-snug">Qual seleção venceu a primeira Copa do Mundo em 1930?</p>
-<div class="space-y-3">
-<button class="w-full text-left p-4 border border-on-primary/20 rounded-xl hover:bg-on-primary hover:text-primary transition-all font-bold">Brasil</button>
-<button class="w-full text-left p-4 border border-on-primary/20 rounded-xl hover:bg-on-primary hover:text-primary transition-all font-bold">Argentina</button>
-<button class="w-full text-left p-4 border border-on-primary/20 rounded-xl hover:bg-on-primary hover:text-primary transition-all font-bold">Uruguai</button>
-</div>
-</div>
+    <h3 class="text-2xl font-black italic uppercase mb-8">Quiz da Copa</h3>
+    <div class="space-y-6">
+        <p class="font-bold text-lg leading-snug">Qual seleção venceu a primeira Copa do Mundo em 1930?</p>
+        
+        <div class="space-y-3" id="quiz-options">
+            <button onclick="checkAnswer(this, false)" class="w-full text-left p-4 border border-on-primary/20 rounded-xl hover:bg-on-primary hover:text-primary transition-all font-bold">
+                Brasil
+            </button>
+            <button onclick="checkAnswer(this, false)" class="w-full text-left p-4 border border-on-primary/20 rounded-xl hover:bg-on-primary hover:text-primary transition-all font-bold">
+                Argentina
+            </button>
+            <button onclick="checkAnswer(this, true)" class="w-full text-left p-4 border border-on-primary/20 rounded-xl hover:bg-on-primary hover:text-primary transition-all font-bold">
+                Uruguai
+            </button>
+        </div>
+        
+        <!-- Mensagem de feedback (inicia escondida) -->
+        <p id="quiz-feedback" class="text-sm font-bold italic hidden"></p>
+    </div>
 </article>
+
+<script>
+function checkAnswer(button, isCorrect) {
+    // Seleciona todos os botões do quiz
+    const buttons = document.querySelectorAll('#quiz-options button');
+    const feedback = document.getElementById('quiz-feedback');
+    
+    // Desabilita os botões após o primeiro clique para não clicar várias vezes
+    buttons.forEach(btn => btn.disabled = true);
+
+    if (isCorrect) {
+        // Estilo para Resposta Correta: Fundo Verde e texto branco
+        button.classList.remove('hover:bg-on-primary', 'hover:text-primary');
+        button.classList.add('bg-green-500', 'border-green-500', 'text-white', 'scale-105');
+        feedback.innerText = "CORRETO! O Uruguai foi o primeiro campeão.";
+        feedback.classList.add('text-black-300');
+    } else {
+        // Estilo para Resposta Errada: Fundo Vermelho
+        button.classList.remove('hover:bg-on-primary', 'hover:text-primary');
+        button.classList.add('bg-red-500', 'border-red-500', 'text-white', 'opacity-70');
+        
+        // Também destaca o correto automaticamente para o usuário aprender
+        buttons.forEach(btn => {
+            if(btn.innerText.includes("Uruguai")) {
+                btn.classList.add('border-green-500', 'text-green-300');
+            }
+        });
+        
+        feedback.innerText = "ERROU! Tente novamente na próxima.";
+        feedback.classList.add('text-red-300');
+    }
+    
+    // Mostra a mensagem de feedback com uma pequena animação
+    feedback.classList.remove('hidden');
+    feedback.classList.add('animate-pulse');
+}
+</script>
 <!-- Playlist -->
 <article class="lg:col-span-4 bg-surface-container p-8 rounded-3xl rgb-animated-border">
     <h3 class="text-xl font-black italic uppercase mb-6">Música Oficial</h3>
@@ -475,37 +672,67 @@
 
     </div>
 </article>
-<!-- Footer & Newsletter -->
-<footer class="bg-surface py-24 border-t border-white/5 reveal">
-<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-12 gap-12">
-<div class="md:col-span-4 space-y-8">
-<h2 class="text-3xl font-black italic text-secondary">FIFA World Cup 2026</h2>
-<div class="space-y-4">
-<h3 class="font-bold italic uppercase text-lg">Copa Verde: Sustentabilidade</h3>
-<p class="text-sm opacity-50">Nosso compromisso é realizar o torneio mais sustentável da história, com zero emissão líquida de carbono.</p>
-</div>
-</div>
-<div class="md:col-span-4">
-<h3 class="font-black italic uppercase mb-8 text-lg">Minuto da Copa</h3>
-<p class="text-sm opacity-60 mb-6">Receba as últimas notícias, ofertas de ingressos e novidades no seu e-mail.</p>
-<form class="space-y-4">
-<label class="sr-only" for="newsletter-email">Seu e-mail</label>
-<input class="w-full bg-surface-container border-white/10 rounded-xl px-4 py-3" id="newsletter-email" placeholder="Seu e-mail" type="email"/>
-<button class="w-full bg-secondary text-on-secondary font-black italic py-3 rounded-xl uppercase" type="submit">Inscrever-se</button>
-</form>
-</div>
-<div class="md:col-span-4 flex flex-col items-end">
-<nav aria-label="Links úteis de rodapé" class="flex flex-col gap-4 text-right">
-<a class="opacity-50 hover:opacity-100 hover:text-secondary transition-all" href="#">Privacidade</a>
-<a class="opacity-50 hover:opacity-100 hover:text-secondary transition-all" href="#">Termos de Uso</a>
-<a class="opacity-50 hover:opacity-100 hover:text-secondary transition-all" href="#">FAQ Ingressos</a>
-<a class="opacity-50 hover:opacity-100 hover:text-secondary transition-all" href="#">Imprensa</a>
-</nav>
-</div>
-</div>
-<div class="mt-24 text-center text-[0.6rem] opacity-20 uppercase tracking-[0.5em]">
-            © 2024 FIFA • All Rights Reserved
+<!-- FIM DA SECTION ANTERIOR (Garantia de fechamento) -->
+</div></section></main> 
+
+<!-- FOOTER CENTRALIZADO E BLINDADO -->
+<footer class="relative w-full bg-surface py-20 border-t border-white/5 flex justify-center items-center clear-both">
+    
+    <!-- Container de Largura Máxima -->
+    <div class="w-full max-w-7xl px-4 md:px-8">
+        
+        <!-- O Card Estilo Fase de Grupos -->
+        <div class="bg-surface-container-high w-full p-8 md:p-16 rounded-[2.5rem] border border-white/5 relative overflow-hidden shadow-2xl">
+            
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 relative z-10">
+                
+                <!-- Coluna 1: FIFA World Cup 2026 -->
+                <div class="md:col-span-4 space-y-8">
+                    <h2 class="text-4xl font-black italic text-secondary uppercase leading-[0.9]">
+                        FIFA World<br>Cup 2026
+                    </h2>
+                    <div class="space-y-4">
+                        <h3 class="font-bold italic uppercase text-lg text-white">Copa Verde: Sustentabilidade</h3>
+                        <p class="text-sm text-white/50 leading-relaxed">
+                            Nosso compromisso é realizar o torneio mais sustentável da história, com zero emissão líquida de carbono.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Coluna 2: Minuto da Copa -->
+                <div class="md:col-span-4">
+                    <h3 class="font-black italic uppercase mb-8 text-lg text-white">Minuto da Copa</h3>
+                    <p class="text-sm text-white/60 mb-6">Receba as últimas notícias, ofertas de ingressos e novidades no seu e-mail.</p>
+                    <div class="space-y-4">
+                        <input class="w-full bg-surface border border-white/10 rounded-xl px-4 py-3 text-white outline-none focus:border-secondary transition-all" placeholder="Seu e-mail" type="email">
+                        <button class="w-full bg-secondary text-on-secondary font-black italic py-3 rounded-xl uppercase hover:brightness-110 transition-all">
+                            Inscrever-se
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Coluna 3: Links (Alinhamento corrigido) -->
+                <div class="md:col-span-4 flex flex-col items-start md:items-end justify-start">
+                    <nav class="flex flex-col gap-4 text-left md:text-right font-bold">
+                        <a class="text-white/40 hover:text-secondary transition-all" href="#">Privacidade</a>
+                        <a class="text-white/40 hover:text-secondary transition-all" href="#">Termos de Uso</a>
+                        <a class="text-white/40 hover:text-secondary transition-all" href="#">FAQ Ingressos</a>
+                        <a class="text-white/40 hover:text-secondary transition-all" href="#">Imprensa</a>
+                    </nav>
+                </div>
+
+                <!-- Direitos Autorais -->
+                <div class="col-span-full mt-12 pt-8 border-t border-white/5 text-center">
+                    <p class="text-[0.6rem] text-white/20 uppercase tracking-[0.5em]">
+                        © 2024 FIFA • All Rights Reserved
+                    </p>
+                </div>
+            </div>
+
+            <!-- Detalhe do Globo no Fundo -->
+            <span class="material-symbols-outlined absolute -right-12 -bottom-12 text-[18rem] text-white/[0.03] pointer-events-none">public</span>
         </div>
+    </div>
 </footer>
 <script>
         // --- DATA ARRAYS ---
